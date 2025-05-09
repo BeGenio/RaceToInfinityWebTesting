@@ -1,6 +1,22 @@
+# Serve precompressed Brotli files (if present)
+/Build/*.{br}
+  Content-Encoding: br
+  Cache-Control: public, max-age=31536000, immutable
+
+# Serve precompressed Gzip files (.gz)
+/Build/*.{gz}
+  Content-Encoding: gzip
+  Cache-Control: public, max-age=31536000, immutable
+
+# Serve Unity's default compressed format (.unityweb)
 /Build/*.unityweb
   Content-Encoding: gzip
   Cache-Control: public, max-age=31536000, immutable
 
+# Cache other static assets for a year (assuming hash-based filenames)
+/Build/*.{js,wasm,json,data,mem}
+  Cache-Control: public, max-age=31536000, immutable
+
+# Ensure index.html is always up to date
 /index.html
   Cache-Control: no-cache
