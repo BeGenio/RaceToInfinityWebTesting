@@ -1,0 +1,5 @@
+# Set headers for .unityweb files
+/*/*.unityweb
+  Content-Encoding: gzip
+  Cache-Control: public, max-age=31536000
+  Content-Type: application/octet-stream
