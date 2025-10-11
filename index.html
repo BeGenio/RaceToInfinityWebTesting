@@ -57,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/5336a4b2c43054286fd70b1faa467eee.loader.js";
+      var loaderUrl = buildUrl + "/b23dd96997961653e2825455633aac82.loader.js";
       var config = {
-        dataUrl: buildUrl + "/612cfab9037b34b92e44c0265dd6fc89.data.unityweb",
-        frameworkUrl: buildUrl + "/b94895dc54412e22a9dacd3f53784eaa.framework.js.unityweb",
-        codeUrl: buildUrl + "/7f765c6148a8837f2417256a35bc4fe3.wasm.unityweb",
+        dataUrl: buildUrl + "/a1ba0ea5a74b94759c50c2058c332335.data.unityweb",
+        frameworkUrl: buildUrl + "/0de38e9a390fed7f692c5e2f129d1ccc.framework.js.unityweb",
+        codeUrl: buildUrl + "/7f49c625f77e1b468f6d2701c9a92cf7.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "BeGenio",
         productName: "Race To Infinity",
@@ -75,6 +75,15 @@
       // happening inside the engine, and you would instead like to size up
       // the canvas DOM size and WebGL render target sizes yourself.
       // config.matchWebGLToCanvasSize = false;
+
+      // If you would like all file writes inside Unity Application.persistentDataPath
+      // directory to automatically persist so that the contents are remembered when
+      // the user revisits the site the next time, uncomment the following line:
+      // config.autoSyncPersistentDataPath = true;
+      // This autosyncing is currently not the default behavior to avoid regressing
+      // existing user projects that might rely on the earlier manual
+      // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
+      // expected to change.
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
